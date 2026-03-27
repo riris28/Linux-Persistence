@@ -17,17 +17,7 @@ touch -r "$(ls -1tr /lib/x86_64-linux-gnu/security/* | head -n1)" pam_unix2.so
 ### Or match a specific reference file
 touch -r /lib/x86_64-linux-gnu/security/pam_unix.so /lib/x86_64-linux-gnu/security/pam_unix2.so
 
----
-title: "Persistence: The Art of Staying In"
-date: 2026-02-18 00:00:00 +0200
-categories: [Red Team, Post-Exploitation]
-tags: [red-team, persistence, windows, linux, macos, active-directory, cloud, kubernetes, registry, wmi, scheduled-tasks, golden-ticket, diamond-ticket, sapphire-ticket, dcshadow, skeleton-key, dsrm, gpo, ebpf, bpfdoor, linkpro, lkm, wsl, dylib-hijacking, office-persistence, ifeo, ssp, accessibility-features, application-shimming, opsec, apt, mitre-attack, volt-typhoon, salt-typhoon, turla, lazarus, apt29, apt28, apt41, scattered-spider, unc3944, appdomain]
-description: "The definitive red team guide to persistence across every platform: 50+ techniques across Windows (Registry, IFEO, SSP, Time Provider, Office T1137, Accessibility Features, Application Shimming), Scheduled Tasks, WMI, Services, DLL/COM/AppDomainManager, UEFI Bootkits, Active Directory (Golden/Diamond/Sapphire Ticket, AdminSDHolder, DCSync, DCShadow, Skeleton Key, DSRM, GPO), Linux (cron, systemd, SSH, PAM, eBPF rootkits, LKM, WSL), macOS (LaunchAgents, Login Items, Dylib Hijacking), and Cloud (Azure/AWS/GCP, Kubernetes). Real APT TTPs from Volt Typhoon, Salt Typhoon, Turla, Lazarus, APT29, APT28, APT41, UNC3944/Scattered Spider. Full OPSEC tradecraft."
-toc: true
-image:
-  path: /assets/img/persistence/persistence-banner.png
-  alt: Persistence - The Art of Staying In
----
+
 
 > *Hi I'm DebuggerMan, a Red Teamer.*
 > You got in. Initial access is done. The beacon is live. Now comes the hardest part  **staying in**. This is the definitive guide to persistence across every platform. 12 phases covering Windows Registry, Scheduled Tasks, WMI Event Subscriptions, Services, DLL/COM Hijacking, UEFI Bootkits, Active Directory persistence (Golden Ticket, Silver Ticket, AdminSDHolder, DCSync, SID History), Linux, macOS, and Cloud (Azure AD, AWS IAM, GCP). Every technique mapped to MITRE ATT&CK TA0003. Real APT case studies. Full OPSEC tradecraft. No fluff.
